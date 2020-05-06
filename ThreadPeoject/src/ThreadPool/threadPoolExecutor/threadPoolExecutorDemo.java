@@ -17,6 +17,7 @@ public class threadPoolExecutorDemo {
                         threadPoolExecutor.getQueue().size()+"，已执行完的任务数目："+threadPoolExecutor.getCompletedTaskCount());
             }
 
+
     }
 }
 
