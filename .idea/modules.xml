@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CollectionProject/CollectionProject.iml" filepath="$PROJECT_DIR$/CollectionProject/CollectionProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOproject/IOproject.iml" filepath="$PROJECT_DIR$/IOproject/IOproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadPeoject/ThreadPeoject.iml" filepath="$PROJECT_DIR$/ThreadPeoject/ThreadPeoject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaBase.iml" filepath="$PROJECT_DIR$/javaBase.iml" />
+    </modules>
+  </component>
+</project>
