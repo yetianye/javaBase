@@ -7,7 +7,7 @@ package actionModel.ChainOfResponsibility.demo2;
  * handle 上下文 ：维护链和 链的执行
  */
 public class HandlerChainContext {
-    HandlerChainContext nextHandlerChainContext;
+    HandlerChainContext next;
     AbstractHandler handler;
 
     public HandlerChainContext(AbstractHandler handler) {
@@ -19,8 +19,8 @@ public class HandlerChainContext {
     }
 
     void runNext(Object arg0){
-        if(this.nextHandlerChainContext != null){
-            this.nextHandlerChainContext.handler(arg0);
+        if(this.next != null){
+            this.next.handler(arg0);
         }
     }
 }

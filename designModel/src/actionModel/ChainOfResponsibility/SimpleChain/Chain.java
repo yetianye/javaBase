@@ -6,8 +6,11 @@ package actionModel.ChainOfResponsibility.SimpleChain;
  * 一个简单的连表
  */
 public class Chain {
+    public Node head ;
 
-    public Node head = new Node();
+    public Chain(){
+       head = new Node();
+    }
 
     void add(Object data){
         Node node = head;
@@ -15,7 +18,6 @@ public class Chain {
             node = node.next;
         }
         node.next = new Node();
-
     }
 
     Node getChanin(){
@@ -26,7 +28,7 @@ public class Chain {
         Chain c= new Chain();
         c.add(123);
         c.add(2342);
-        System.out.println(c);
+        System.out.println(c.getChanin().data + "->" + c.getChanin().next.data);
     }
 }
 
@@ -34,9 +36,9 @@ class Node {
     Node next;
     Object data;
     public Node() {
+
     }
     public Node(Object data) {
         this.data = data;
     }
-
 }
