@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 public class threadPoolExecutorDemo {
     public static void main(String[] args) throws InterruptedException {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,
-                10,
+                5,
                 20,
                 TimeUnit.MILLISECONDS,
                 new ArrayBlockingQueue<>(5));

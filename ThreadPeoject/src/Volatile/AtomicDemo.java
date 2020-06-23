@@ -12,20 +12,21 @@ public class AtomicDemo {
     static volatile long num = 1000000;
 
     public static void main(String[] args) throws InterruptedException {
-        List<Thread> t =new ArrayList<>();
+        List<Thread> threadList =new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             Thread thread = new Thread(() -> {
-                for (int j = 0; j < 200000; j++) {
-                    num--;
+                synchronized (AtomicDemo.class){
+                    for (int j = 0; j < 200000; j++) {
+                            num--;  //volatile变量不能用 共享变量进行赋值，否者不能保证原子性
+                    }
                 }
             });
             thread.start();
-            t.add(thread);
+            threadList.add(thread);
         }
 
-        for (Thread ts : t){
+        for (Thread ts : threadList){
             ts.join();
-            System.out.println(ts.getState());
         }
 
         System.out.println(num);

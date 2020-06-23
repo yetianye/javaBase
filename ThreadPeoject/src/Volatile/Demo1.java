@@ -9,25 +9,25 @@ public class Demo1 {
         task.start();
 
         while (true){
-            /*if(task.isTag()){
+            if(task.isTag()){
                 System.out.println("有啥东西");
-            }*/
+            }
 
             /**
              *  通过加锁解决线程变量可见性问题
              */
-            synchronized (task){
+            /*synchronized (task){
                 if(task.isTag()){
                     System.out.println("有啥东西");
                 }
-            }
+            }*/
         }
     }
 
 }
 
 class Task extends Thread{
-    private boolean tag = false;
+    private volatile boolean tag = false;
 
     public Boolean isTag(){
         return this.tag;
