@@ -14,7 +14,7 @@ import java.util.Map;
 public class Main {
 
 	public static void main(String[] args) {
-		String markdown = String.join("\n", // Markdown document
+		/*String markdown = String.join("\n", // Markdown document
 				"## Builder Pattern", // heading
 				"> Seperate the construction of a complex object from its representation",
 				"Use builder pattern when the construction process is complex.", "----", "Here is an example.");
@@ -28,6 +28,6 @@ public class Main {
 				.setPath("/") // 设置路径
 				.setQuery(Map.of("a", "123", "q", "K&R")) // 设置query
 				.build(); // 完成build
-		System.out.println(url);
+		System.out.println(url);*/
 	}
 }

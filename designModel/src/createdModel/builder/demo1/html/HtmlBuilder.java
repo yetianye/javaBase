@@ -7,7 +7,7 @@ public class HtmlBuilder {
 	private ParagraphBuilder paragraphBuilder = new ParagraphBuilder();
 	private QuoteBuilder quoteBuilder = new QuoteBuilder();
 
-	public String toHtml(String markdown) {
+	/*public String toHtml(String markdown) {
 		StringBuilder buffer = new StringBuilder();
 		markdown.lines().forEach(line -> {
 			if (line.startsWith("#")) {
@@ -21,5 +21,5 @@ public class HtmlBuilder {
 			}
 		});
 		return buffer.toString();
-	}
+	}*/
 }

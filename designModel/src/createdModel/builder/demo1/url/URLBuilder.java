@@ -19,7 +19,7 @@ public class URLBuilder {
 		return new URLBuilder();
 	}
 
-	public String build() {
+	/*public String build() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(scheme).append("://");
 		if (username != null && password != null) {
@@ -36,7 +36,7 @@ public class URLBuilder {
 			});
 		}
 		return sb.toString();
-	}
+	}*/
 
 	public URLBuilder setScheme(String scheme) {
 		this.scheme = Objects.requireNonNull(scheme);
