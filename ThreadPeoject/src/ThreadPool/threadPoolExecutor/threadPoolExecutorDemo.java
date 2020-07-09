@@ -7,11 +7,13 @@ import java.util.concurrent.*;
  */
 public class threadPoolExecutorDemo {
     public static void main(String[] args) throws InterruptedException {
+
+        //任务数量，最大线程数 + 队列任务数，超出执行拒绝策略
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,
-                5,
+                6,
                 20,
                 TimeUnit.MILLISECONDS,
-                new ArrayBlockingQueue<>(5));
+                new ArrayBlockingQueue<>(9));
 
         CountDownLatch countDownLatch  = new CountDownLatch(15);
 
@@ -26,8 +28,6 @@ public class threadPoolExecutorDemo {
          countDownLatch.await();
          System.out.println(countDownLatch.getCount() + ":线程池执行结束");
          System.out.println(" 线程数:----" + threadPoolExecutor.getTaskCount());
-
-        CountDownLatch countDownLatch2  = new CountDownLatch(15);
 
         for(int i=0;i<15;i++){
             threadPoolExecutor.submit(new Task(i,countDownLatch));
