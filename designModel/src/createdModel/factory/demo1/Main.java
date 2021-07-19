@@ -2,6 +2,7 @@ package createdModel.factory.demo1;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 
 /**
  * @Author: yetianye
@@ -13,6 +14,8 @@ public class Main {
     public static void main(String[] args) {
         //静态工厂模式
         Integer.valueOf(123);
+
+        HashMap map = new HashMap();
 
 
     }

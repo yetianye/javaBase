@@ -8,7 +8,16 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * 读写锁
  */
 public class ReadWriteLockDemo {
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+        Thread t1 =  new Thread(()->{
+            counter.add();
+        });
+        Thread t2 =  new Thread(()->{
+            counter.getCount();
+        });
 
+    }
 }
 
 class Counter {

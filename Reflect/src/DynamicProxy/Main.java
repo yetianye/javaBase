@@ -4,6 +4,7 @@ import java.lang.reflect.Proxy;
 
 /**
  * @Author: yetianye
+ * JDK代理
  *
  */
 public class Main {
@@ -16,7 +17,8 @@ public class Main {
     public static void main(String[] args) {
         JavaDeveloper ye = new JavaDeveloper("ye");
         /**
-         * InvocationHandler作用就是，当代理对象的原本方法被调用的时候，会绑定执行一个方法，这个方法就是InvocationHandler里面定义的内容，同时会替代原本方法的结果返回。
+         * InvocationHandler作用就是，当代理对象的原本方法被调用的时候，会绑定执行一个方法，
+         * 这个方法就是InvocationHandler里面定义的内容，同时会替代原本方法的结果返回。
          * InvocationHandler接收三个参数
          * proxy，代理后的实例对象。
          * method，对象被调用方法。

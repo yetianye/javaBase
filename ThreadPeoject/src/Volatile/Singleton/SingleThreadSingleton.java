@@ -4,6 +4,7 @@ package Volatile.Singleton;
  * @Author: yetianye
  * 单线程实现单例模式
  */
+
 public class SingleThreadSingleton {
     //唯一实例
     private static  SingleThreadSingleton instance = null;

@@ -13,12 +13,14 @@ public class threadPoolExecutorDemo {
                 6,
                 20,
                 TimeUnit.MILLISECONDS,
-                new ArrayBlockingQueue<>(9));
+                new ArrayBlockingQueue<>(10),//有界队列
+                new ThreadPoolExecutor.CallerRunsPolicy());
+//                new LinkedBlockingDeque<>());//无界队列
 
-        CountDownLatch countDownLatch  = new CountDownLatch(15);
+        CountDownLatch countDownLatch  = new CountDownLatch(16);
 
 
-        for(int i=0;i<15;i++){
+        for(int i=0;i<40;i++){
             threadPoolExecutor.submit(new Task(i,countDownLatch));
             System.out.println("线程池中线程数目："+threadPoolExecutor.getPoolSize()+"，队列中等待执行的任务数目："+
                     threadPoolExecutor.getQueue().size()+"，已执行完的任务数目："+threadPoolExecutor.getCompletedTaskCount());
@@ -29,12 +31,12 @@ public class threadPoolExecutorDemo {
          System.out.println(countDownLatch.getCount() + ":线程池执行结束");
          System.out.println(" 线程数:----" + threadPoolExecutor.getTaskCount());
 
-        for(int i=0;i<15;i++){
-            threadPoolExecutor.submit(new Task(i,countDownLatch));
-            System.out.println("线程池中线程数目："+threadPoolExecutor.getPoolSize()+"，队列中等待执行的任务数目："+
-                    threadPoolExecutor.getQueue().size()+"，已执行完的任务数目："+threadPoolExecutor.getCompletedTaskCount());
-
-        }
+//        for(int i=0;i<15;i++){
+//            threadPoolExecutor.submit(new Task(i,countDownLatch));
+//            System.out.println("线程池中线程数目："+threadPoolExecutor.getPoolSize()+"，队列中等待执行的任务数目："+
+//                    threadPoolExecutor.getQueue().size()+"，已执行完的任务数目："+threadPoolExecutor.getCompletedTaskCount());
+//
+//        }
 
     }
 }
