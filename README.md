@@ -8,4 +8,4 @@ Java基础笔记
 - NIOproject 网络编程
 - CollecionProject 常用集合
 - Reflect 反射
-- JVM
+- JVM java虚拟机
