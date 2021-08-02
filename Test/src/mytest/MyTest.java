@@ -3,6 +3,7 @@ package mytest;
 import sun.security.util.ArrayUtil;
 
 import java.util.*;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.locks.ReentrantLock;
@@ -23,6 +24,7 @@ public class MyTest {
 
         HashMap hashMap = new HashMap();
         hashMap.put("","");
+        hashMap.get("","");
 
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         linkedHashMap.put("123","33");
@@ -42,11 +44,22 @@ public class MyTest {
 
         ReentrantLock lock = new ReentrantLock();
         lock.lock();
+        try {
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            lock.unlock();
+        }
 
 //        CyclicBarrier cyclicBarrier = new CyclicBarrier();
         int i = 0;
-        System.out.println(i == 0l);
+        System.out.println();
 
+
+
+    }
+
+    abstract class aaa implements Callable{
 
     }
 }
