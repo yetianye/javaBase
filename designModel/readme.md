@@ -13,3 +13,4 @@
 - constructModel : 结构型模式
     - adapter : 适配器模式
     - Decorator : 装饰器模式
+  
