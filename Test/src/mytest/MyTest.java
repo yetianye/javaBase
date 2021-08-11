@@ -24,7 +24,6 @@ public class MyTest {
 
         HashMap hashMap = new HashMap();
         hashMap.put("","");
-        hashMap.get("","");
 
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         linkedHashMap.put("123","33");
